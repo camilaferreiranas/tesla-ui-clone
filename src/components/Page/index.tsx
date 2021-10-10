@@ -1,5 +1,5 @@
-import React from 'react';
-import DefaultOverlaycontent from '../DefaultOverlayContent';
+
+import DefaultOverlayContent from '../DefaultOverlayContent';
 import {ModelsWraper, ModelsSection} from '../Model'
 
 
@@ -8,30 +8,29 @@ function Page() {
   return (
    <Container>
    <ModelsWraper>
-     <div>
-       {
-         [
-           'Model S',
-           'Model Y', 
-           'Model 3', 
-           'Model X', 
-           'Solar Panels', 
-           'Solar Roof', 
-           'Accessories'
-         ].map(modelName => 
-          <ModelsSection
-          key={modelName}
-          className="colored"
-           modelName={modelName}
-           overlayNode={<DefaultOverlaycontent
-             label={modelName}
-             description="Order Online for deliver"
-           />}
-          />
-          )
-       }
-     
-     </div>
+   <div>
+          {[
+            'Model S',
+            'Model Y',
+            'Model 3',
+            'Model X',
+            'Solar Panel',
+            'Solar Roof',
+            'Accessories'
+          ].map(modelName => (
+            <ModelsSection
+              key={modelName}
+              className="colored"
+              modelName={modelName}
+              overlayNode={
+                <DefaultOverlayContent
+                  label={modelName}
+                  description="Order Online for Delivery"
+                />
+              }
+            />
+          ))}
+        </div>
    </ModelsWraper>
    </Container>
   );
