@@ -1,9 +1,10 @@
 
 import DefaultOverlayContent from '../DefaultOverlayContent';
 import {ModelsWraper, ModelsSection} from '../Model'
+import UniqueOverLay from '../UniqueOverlay';
 
 
-import { Container } from './styles';
+import { Container, Spacer } from './styles';
 function Page() {
   return (
    <Container>
@@ -31,6 +32,13 @@ function Page() {
             />
           ))}
         </div>
+
+        <Spacer />
+
+  
+        <UniqueOverLay>
+          
+        </UniqueOverLay>
    </ModelsWraper>
    </Container>
   );
